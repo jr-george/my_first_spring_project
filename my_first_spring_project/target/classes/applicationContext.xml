@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define a bean for HelloWorld -->
+    <bean id="helloWorld" class="com.trainibit.example.HelloWorld">
+        <property name="message" value="Hello, from XML!"/>
+        <property name="user" ref="user"/>
+    </bean>
+    <bean id="user" class="com.trainibit.example.User">
+        <property name="name" value="Beto" />
+        <property name="lastName" value="Jarillo" />
+        <property name="birthDate" value="10/30/1986" />
+    </bean>
+</beans>
